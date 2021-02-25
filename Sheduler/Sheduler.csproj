@@ -61,6 +61,7 @@
     </Compile>
     <Compile Include="Models\Shedule.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="PasswordBox.cs" />
     <Compile Include="Presenters\Presener.cs" />
     <Compile Include="Views\AuthUI.xaml.cs">
       <DependentUpon>AuthUI.xaml</DependentUpon>

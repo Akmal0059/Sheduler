@@ -4,9 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sheduler.Views"
+        xmlns:cust="clr-namespace:Sheduler"
         mc:Ignorable="d" ResizeMode="NoResize"
-        Title="Sign up" Height="476" Width="348">
+        Title="Sign up" Height="461" Width="323">
     <Grid>
-
+        <Button Content="Регистрация" BorderThickness="0" Background="#FF5F6ADE" FontSize="18" Foreground="White" 
+                Margin="10,0,10,42" Height="35" VerticalAlignment="Bottom"/>
+        <TextBox HorizontalAlignment="Left" Height="33" Margin="10,0,0,282" TextWrapping="Wrap" Text="TextBox" 
+                 VerticalAlignment="Bottom" Width="297" FontSize="16" VerticalContentAlignment="Center"/>
+        <cust:CustomPasswordBox Margin="10,0,10,192" Height="35" VerticalAlignment="Bottom" Text="Password" 
+                                FontSize="16" VerticalContentAlignment="Center"/>
     </Grid>
 </Window>

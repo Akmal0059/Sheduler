@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sheduler.Models
 {
-    class Shedule
+    public class Shedule
     {
     }
 }

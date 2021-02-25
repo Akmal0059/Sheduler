@@ -4,15 +4,58 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sheduler.Views"
-        xmlns:cust="clr-namespace:Sheduler"
-        mc:Ignorable="d" ResizeMode="NoResize"
-        Title="Sign up" Height="461" Width="323">
-    <Grid>
-        <Button Content="Регистрация" BorderThickness="0" Background="#FF5F6ADE" FontSize="18" Foreground="White" 
-                Margin="10,0,10,42" Height="35" VerticalAlignment="Bottom"/>
-        <TextBox HorizontalAlignment="Left" Height="33" Margin="10,0,0,282" TextWrapping="Wrap" Text="TextBox" 
-                 VerticalAlignment="Bottom" Width="297" FontSize="16" VerticalContentAlignment="Center"/>
-        <cust:CustomPasswordBox Margin="10,0,10,192" Height="35" VerticalAlignment="Bottom" Text="Password" 
-                                FontSize="16" VerticalContentAlignment="Center"/>
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d" ResizeMode="NoResize" WindowStyle="None" Height="461" Width="323" >
+    <Grid Background="#FF86A6E5" MouseDown="Grid_MouseDown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image VerticalAlignment="Top" Margin="100,15,100,0" Grid.ColumnSpan="2"
+               Source="/Sheduler;component/Resources/schedule.png" Stretch="Fill" Width="80" Height="80"/>
+
+        <!--<Image Height="111" VerticalAlignment="Top" Margin="95,0,111.8,0" Grid.ColumnSpan="2" Source="bird (3).png" Stretch="Fill"/>
+        <Image x:Name="PupilL" Height="25" VerticalAlignment="Top" Margin="0,20,31.4,0" 
+               Source="pupil.png" HorizontalAlignment="Right" Width="22"/>
+        <Image x:Name="PupilR" Height="25" VerticalAlignment="Top" Margin="4.6,20,0,0" 
+               Source="pupil.png" HorizontalAlignment="Left" Width="22" Grid.Column="1"/>-->
+
+
+        <Rectangle Width="300" Height="200" Fill="White" RadiusY="10" RadiusX="10" Grid.ColumnSpan="2" Margin="8,116,8.8,115.2">
+            <Rectangle.Effect>
+                <DropShadowEffect Color="#FFBCBCBC" BlurRadius="10" Direction="0" RenderingBias="Quality"
+                                  ShadowDepth="3"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <StackPanel Orientation="Vertical" Margin="20,140,19.8,0" Background="White" Height="175" 
+                    VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <TextBox x:Name="Tb_UserName" Height="50"  Margin="10 15"
+                 TextWrapping="Wrap" materialDesign:HintAssist.Hint="Имя пользователя" 
+                 VerticalAlignment="Bottom" FontSize="15" VerticalContentAlignment="Center"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+
+            <TextBox x:Name="Tb_Login" Height="50" Margin=" 10 15"
+                 TextWrapping="Wrap" materialDesign:HintAssist.Hint="Логин" VerticalAlignment="Bottom" 
+                 FontSize="15" VerticalContentAlignment="Center" 
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        </StackPanel>
+
+        <Button x:Name="Btn_SignUp" Content="Регистрация" BorderThickness="0"
+                Background="#FF5F6ADE" FontSize="18" Foreground="White" 
+                Margin="10,0,9.8,42.2" Height="35" VerticalAlignment="Bottom" 
+                Grid.ColumnSpan="2"/>
+        <Button x:Name="Btn_Close" VerticalAlignment="Top" HorizontalAlignment="Right" BorderThickness="0"
+                Grid.Column="2" Margin="10" Padding="3" Background="#FFE56A50" Click="Btn_Close_Click">
+            <Canvas Width="24" Height="24" Margin="0">
+                <Path Fill="Black" Data="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+            </Canvas>
+        </Button>
     </Grid>
 </Window>

@@ -23,5 +23,17 @@ namespace Sheduler.Views
         {
             InitializeComponent();
         }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
+        private void Btn_Close_Click(object sender, RoutedEventArgs e)
+        {
+            //DialogResult = true;
+            Close();
+        }
     }
 }

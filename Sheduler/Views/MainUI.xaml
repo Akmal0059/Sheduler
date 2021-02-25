@@ -4,9 +4,24 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sheduler.Views"
-        mc:Ignorable="d"
-        Title="MainUI" Height="450" Width="800">
-    <Grid>
-        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        mc:Ignorable="d" ResizeMode="NoResize" WindowStyle="None" 
+        Height="450" Width="800">
+    <Grid MouseDown="Grid_MouseDown">
+        <Label x:Name="L_UserName" Content="UserName" HorizontalAlignment="Right" VerticalAlignment="Top" 
+               Margin="20" FontSize="15" FontWeight="Bold"/>
+        <StackPanel x:Name="SP_Weeks" Orientation="Vertical" HorizontalAlignment="Left" Width="80" Background="#FFA5CE68">
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Background="#FFC24343" Height="215" Margin="80,0,0,-0.4">
+
+        </StackPanel>
     </Grid>
 </Window>
